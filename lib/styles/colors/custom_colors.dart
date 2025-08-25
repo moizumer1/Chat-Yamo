@@ -12,6 +12,7 @@ class CustomColors {
   static const arrowColor = Color(0xFFF09240);
   static const gray8080Color = Color(0xFF808080);
   static const redColor = Color(0xFFDF1025);
+  static const navigationColor = Color(0xFF556094);
 
 
 

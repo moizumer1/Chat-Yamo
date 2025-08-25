@@ -26,7 +26,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   Widget _buildSvgIcon(String assetName, bool isActive, {double size = 24}) {
     return SvgPicture.asset(
       assetName,
-      color: isActive ? CustomColors.arrowColor : Colors.white54,
+      color: isActive ? CustomColors.arrowColor : Color(0xFF556094).withAlpha((255 * .5).toInt()),
       width: size,
       height: size,
     );
@@ -47,8 +47,8 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
             ),
           ),
           borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(16), // 👈 radius
-            topRight: Radius.circular(16), // 👈 radius
+            topLeft: Radius.circular(16),
+            topRight: Radius.circular(16),
           ),
         ),
         child: ClipRRect(
@@ -58,7 +58,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           ),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            backgroundColor: const Color(0xFF0A0A1A),
+            backgroundColor: Colors.transparent,
             currentIndex: _currentIndex,
             selectedItemColor: CustomColors.arrowColor,
             unselectedItemColor: Colors.white54,

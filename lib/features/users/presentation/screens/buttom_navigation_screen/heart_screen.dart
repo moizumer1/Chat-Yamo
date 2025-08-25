@@ -23,42 +23,47 @@ class HeartScreen extends StatelessWidget {
         return Dialog(
           backgroundColor: Colors.transparent,
           insetPadding: EdgeInsets.symmetric(horizontal: 20.w),
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 14.w),
-            decoration: BoxDecoration(
-              color: CustomColors.black101Color,
-              //borderRadius: BorderRadius.all(Radius.circular(20)),
-              border: Border(
-                top: BorderSide(color: Color(0xFF8622D1), width: 2),
-                bottom: BorderSide(color: Color(0xFF0D3F89), width: 2),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(22),
+            //clipBehavior:Clip.antiAliasWithSaveLayer,
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 14.w),
+              decoration: BoxDecoration(
+                color: CustomColors.black101Color,
+                //borderRadius: BorderRadius.all(Radius.circular(20)),
+                border: Border(
+                  top: BorderSide(color: Color(0xFF8622D1), width: 1),
+                  bottom: BorderSide(color: Color(0xFF0D3F89), width: 1),
+
+                ),
               ),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                MyText(
-                  text: "Welcome!!!",
-                  fontWeight: FontWeight.w600,
-                  fontSize: 28.sp,
-                  color: CustomColors.whiteColor,
-                ),
-                SizedBox(height: 15.h),
-                CustomRichText2Widget(
-                  text1: "Welcome to",
-                  text2: " Chat&Yamo! ",
-                  text3: "  Let's Help You Find Your Perfect Match.",
-                  onTapText2: () {},
-                ),
-                SizedBox(height: 20.h),
-                CustomContinueButton(
-                  text: "continue",
-                  backgroundColor: CustomColors.primaryColor,
-                  verticalPadding: 20,
-                  onTap: () {
-                    Navigator.of(context).pop(); // Close the dialog
-                  },
-                ),
-              ],
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  MyText(
+                    text: "Welcome!!!",
+                    fontWeight: FontWeight.w600,
+                    fontSize: 28.sp,
+                    color: CustomColors.whiteColor,
+                  ),
+                  SizedBox(height: 15.h),
+                  CustomRichText2Widget(
+                    text1: "Welcome to",
+                    text2: " Chat&Yamo! ",
+                    text3: "  Let's Help You Find Your Perfect Match.",
+                    onTapText2: () {},
+                  ),
+                  SizedBox(height: 20.h),
+                  CustomContinueButton(
+                    text: "continue",
+                    backgroundColor: CustomColors.primaryColor,
+                    verticalPadding: 20,
+                    onTap: () {
+                      Navigator.of(context).pop(); // Close the dialog
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         );
@@ -135,7 +140,7 @@ class HeartScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              // The rest of your screen content
+
             ],
           ),
         ),
