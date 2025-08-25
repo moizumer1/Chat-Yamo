@@ -1,0 +1,51 @@
+name: dating
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_screenutil: ^5.9.3
+  provider: ^6.1.5+1
+  flutter_svg: ^2.2.0
+  pinput: ^5.0.1
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/dummy/
+    - assets/images/
+    - assets/icons/
+
+
+  fonts:
+    - family: Geist
+      fonts:
+        - asset: fonts/Geist/Geist-Black-BF6569491cec591.ttf
+        - asset: fonts/Geist/Geist-Bold-BF6569491da5a14.ttf
+        - asset: fonts/Geist/Geist-Light-BF6569491dc9c01.ttf
+        - asset: fonts/Geist/Geist-Medium-BF6569491e1c281.ttf
+        - asset: fonts/Geist/Geist-Regular-BF6569491e3eff1.ttf
+
+
