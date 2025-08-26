@@ -15,13 +15,18 @@ import '../widgets/custom_drop_coundtry_code_widget.dart';
 import '../widgets/custom_rich_text2_widget.dart';
 import '../widgets/my_text_widget.dart';
 
+
+
+
 class LoginVarificationScreen extends StatelessWidget {
   const LoginVarificationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final strings = context.loc;
-    final provider = Provider.of<LoginViewModel>(context);
+
+    return Consumer<LoginViewModel>(
+      builder: (context, viewModel, child) {
         return Scaffold(
           resizeToAvoidBottomInset: false,
           body: Stack(
@@ -93,7 +98,7 @@ class LoginVarificationScreen extends StatelessWidget {
                       color: CustomColors.whiteColor,
                     ),
                     10.height,
-                    CustomNumberField(controller: provider.whatsappNumberController),
+                    CustomNumberField(controller: viewModel.whatsappNumberController),
                     30.height,
                     CustomRichText2Widget(
                       text1: strings.pressContinue,
@@ -107,18 +112,17 @@ class LoginVarificationScreen extends StatelessWidget {
                     CustomContinueButton(
                       text: strings.receivewhatsappmessage,
                       backgroundColor: CustomColors.primaryColor,
-                      onTap: () async {
+                      onTap: ()  {
 
                           Navigator.pushNamed(context, Routes.varificationcodeScreen);
-                      },
+                        }
                     ),
 
-
+                    // SMS Button
                     CustomContinueButton(
                       text: strings.receivesms,
                       backgroundColor: CustomColors.primaryColor,
-                      onTap: () {
-
+                      onTap: ()  {
                       },
                     ),
 
@@ -136,6 +140,7 @@ class LoginVarificationScreen extends StatelessWidget {
             ],
           ),
         );
-
+      },
+    );
   }
 }

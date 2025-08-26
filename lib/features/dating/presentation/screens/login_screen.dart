@@ -15,13 +15,17 @@ import '../widgets/custom_country_drop_down_widget.dart';
 import '../widgets/custom_rich_text2_widget.dart';
 import '../widgets/my_text_widget.dart';
 
+
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final strings = context.loc;
-    final provider = Provider.of<LoginViewModel>(context);
+
+    return Consumer<LoginViewModel>(
+      builder: (context, viewModel, child) {
         return Scaffold(
           resizeToAvoidBottomInset: false,
           body: Stack(
@@ -36,6 +40,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
+
               Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -49,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-
+              // Content
               Padding(
                 padding: EdgeInsets.only(
                   top: 60.h,
@@ -92,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                       color: CustomColors.whiteColor,
                     ),
                     10.height,
-                    CustomNumberField(controller: provider.numberController),
+                    CustomNumberField(controller: viewModel.numberController),
                     30.height,
                     CustomRichText2Widget(
                       text1: strings.pressContinue,
@@ -121,6 +126,7 @@ class LoginScreen extends StatelessWidget {
             ],
           ),
         );
-
+      },
+    );
   }
 }
