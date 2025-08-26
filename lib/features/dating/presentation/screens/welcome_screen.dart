@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../config/router/route_constants.dart';
+import '../../core/constants/image_constants.dart';
 import '../../core/styles/colors/custom_colors.dart';
 import '../widgets/cutom_buttom_widget.dart';
 import '../widgets/rich_text_widget.dart';
@@ -19,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("welcomeimage".pngImage),
+            image: AssetImage(AppImages.welcomeimage),
             fit: BoxFit.cover,
           ),
         ),
@@ -30,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
             children: [
 
               Image.asset(
-                'logo'.pngImage,
+                AppImages.logoimage,
                 width: 206.w,
                 height: 99.h,
               ),
@@ -52,14 +53,14 @@ class WelcomeScreen extends StatelessWidget {
 
 
               CutomButtomWidget(
-                svgPath: "phonenumbericon".svgIcon,
+                svgPath: AppIcon.phonenumbericon,
                 text: strings.connectWithPhone,
                 onTap: () {
                     Navigator.pushNamed(context, Routes.loginScreen);
                 },
               ),
               CutomButtomWidget(
-                svgPath: "facebookicon".svgIcon,
+                svgPath: AppIcon.facebookicon,
                 text: strings.loginWithFacebook,
                 onTap: () {
 

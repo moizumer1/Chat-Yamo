@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 import '../../config/router/route_constants.dart';
+import '../../core/constants/image_constants.dart';
 import '../../core/styles/colors/custom_colors.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -31,7 +32,7 @@ class SplashScreen extends StatelessWidget {
         ),
         child: Center(
           child: Image.asset(
-            'logo'.pngImage,
+            AppImages.logoimage,
             width: 206.w,
             height: 99.h,
           ),

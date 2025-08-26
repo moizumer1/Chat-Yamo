@@ -10,6 +10,7 @@ import 'features/dating/core/localization/localization_provider.dart';
 import 'features/dating/core/styles/colors/custom_colors.dart';
 import 'features/dating/core/styles/layouts/font.dart';
 import 'features/dating/presentation/provider/selection_provider.dart';
+import 'features/dating/presentation/view_model/auth_view_model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => SelectionProvider()),
         ChangeNotifierProvider(create: (_) => LocalizationProvider()),
+
+        //model
+        ChangeNotifierProvider(create: (_) => LoginViewModel()),
 
       ],
       child: ScreenUtilInit(
@@ -41,7 +45,6 @@ class MyApp extends StatelessWidget {
               ),
               title: 'Date App',
               locale: provider.locale,
-
               localizationsDelegates: [
                 AppLocalizations.delegate,
 

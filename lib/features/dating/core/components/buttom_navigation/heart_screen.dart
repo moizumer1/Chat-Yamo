@@ -1,3 +1,4 @@
+import 'package:dating/features/dating/core/constants/image_constants.dart';
 import 'package:dating/features/dating/core/localization/app_localizations.dart';
 import 'package:dating/features/dating/core/utils/extensions.dart';
 import 'package:flutter/cupertino.dart';
@@ -108,7 +109,7 @@ class HeartScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
-                    "hoemscreenlogo".pngImage,
+                    AppImages.hoemscreenlogo,
                     height: 24.h,
                     width: 245.w,
                   ),
