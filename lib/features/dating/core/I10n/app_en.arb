@@ -1,0 +1,18 @@
+{
+  "@@locale": "en",
+  "welcome": "Welcome",
+  "enter_whatsapp": "Please enter your WhatsApp Number",
+  "country": "Country",
+  "whatsapp_number": "WhatsApp Number",
+  "press_continue": "Press ",
+  "continue_text": "'Continue' ",
+  "receive_code": "to receive a code from Chat&Yamo to verify your phone number.",
+  "continue_btn": "Continue",
+  "already_account": "Already have an account created with an Email Address? Then Connect ",
+  "here": "Here ",
+  "log_in": "Log In",
+   'verification_code': 'Verification Code',
+   'enter_verification_code': 'Enter Verification Code',
+   'recieve_whatsapp_number': 'Receive An WhatsApp Message',
+    'receive_sms': 'Receive An SMS',
+}
