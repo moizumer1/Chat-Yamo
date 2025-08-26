@@ -19,6 +19,12 @@ class AppIcon {
 
   static const String phonenumbericon = "assets/icons/phonenumbericon.svg";
   static const String facebookicon = "assets/icons/facebookicon.svg";
+  static const String settingslidericon = "assets/icons/settingslidericon.svg";
+  static const String hearticon = "assets/icons/hearticon.svg";
+  static const String commenticon = "assets/icons/commenticon.svg";
+  static const String logoicon = "assets/icons/logoicon.svg";
+  static const String sparklesicon = "assets/icons/sparklesicon.svg";
+  static const String profileicon = "assets/icons/profileicon.svg";
 
 
 }

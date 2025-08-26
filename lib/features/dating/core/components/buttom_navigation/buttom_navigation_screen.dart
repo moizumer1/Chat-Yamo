@@ -1,3 +1,4 @@
+import 'package:dating/features/dating/core/constants/image_constants.dart';
 import 'package:dating/features/dating/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -69,23 +70,23 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
             },
             items: [
               BottomNavigationBarItem(
-                icon: _buildSvgIcon("hearticon".svgIcon, _currentIndex == 0),
+                icon: _buildSvgIcon(AppIcon.hearticon, _currentIndex == 0),
                 label: "",
               ),
               BottomNavigationBarItem(
-                icon: _buildSvgIcon("commenticon".svgIcon, _currentIndex == 1),
+                icon: _buildSvgIcon(AppIcon.commenticon, _currentIndex == 1),
                 label: "",
               ),
               BottomNavigationBarItem(
-                icon: _buildSvgIcon("logoicon".svgIcon, _currentIndex == 2),
+                icon: _buildSvgIcon(AppIcon.logoicon, _currentIndex == 2),
                 label: "",
               ),
               BottomNavigationBarItem(
-                icon: _buildSvgIcon("sparklesicon".svgIcon, _currentIndex == 3),
+                icon: _buildSvgIcon(AppIcon.sparklesicon, _currentIndex == 3),
                 label: "",
               ),
               BottomNavigationBarItem(
-                icon: _buildSvgIcon("profileicon".svgIcon, _currentIndex == 4),
+                icon: _buildSvgIcon(AppIcon.profileicon, _currentIndex == 4),
                 label: "",
               ),
             ],

@@ -139,7 +139,7 @@ class HeartScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SvgPicture.asset("settingslidericon".svgIcon),
+                      SvgPicture.asset(AppIcon.settingslidericon),
                     ],
                   ),
                 ],
